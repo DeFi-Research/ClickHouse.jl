@@ -47,5 +47,5 @@ function query(client::ClickHouseClient, query_str)
 
     @debug response
 
-    CSV.read(IOBuffer(resp_str))
+    CSV.read(IOBuffer(resp_str),DataFrame)
 end
